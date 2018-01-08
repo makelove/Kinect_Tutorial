@@ -5,10 +5,16 @@
     - macOS
     - python 3.6
     - libfreenect
+        - API:https://openkinect.github.io/libfreenect2/index.html
     - OpenCV 3.3
 - 参考图书：
     - [Hacking the Xbox Kinect](https://item.jd.com/19393582.html)    
         - 使用libfreenect
+
+- 校准
+    - https://openkinect.org/wiki/Calibration
+    - 好 [Kinect校准教程](http://rgbdemo.org/index.php/Documentation/TutorialProjectorKinectCalibration)
+    
     
 - fakenect hands freenect-cppview    
 
@@ -24,6 +30,7 @@
     - >It is somewhat hard to tell about your PCIe bandwidth带宽不够. It is part of the motherboard configuration and it depends on the USB controller link too. You can try out different machines though, or you can use multiple machines and connect them through ROS.
     - 需要一台配备强大GPU的高端个人电脑，每个Kinect需要一个USB3控制器，每个控制器都有自己的PCI-Express x8或x16连接。
     - [亚马孙 4 Port PCI Express (PCIe) SuperSpeed USB 3.0 Card Adapter](https://www.amazon.com/Express-SuperSpeed-Adapter-Dedicated-Channels/dp/B00HJZEA2S/ref=sr_1_2?ie=UTF8&qid=1473310532&sr=8-2&keywords=startech+PCIe+usb3)
+    - https://forum.openframeworks.cc/t/multiple-kinect-setup-for-real-time-volumetric-reconstruction-and-tracking-of-people/15271
     
     
 ```python
