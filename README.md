@@ -10,6 +10,7 @@
 - 参考图书：
     - [Hacking the Xbox Kinect](https://item.jd.com/19393582.html)    
         - 使用libfreenect
+    - Raspberry-Kinect-Opencv https://github.com/Snigf12/Python-Raspberry-Kinect-Opencv---Artificial-Vision-System
 
 - 校准
     - https://openkinect.org/wiki/Calibration

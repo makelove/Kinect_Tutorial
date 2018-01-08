@@ -6,6 +6,8 @@
 
 """
 freenect_cv2_demo1.py:
+http://euanfreeman.co.uk/openkinect-python-and-opencv/
+
 简单例子
 """
 
