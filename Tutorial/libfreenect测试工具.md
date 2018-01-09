@@ -1,4 +1,5 @@
 ## libfreenect测试工具
+- 按ESC退出
 
 - freenect-camtest
 - freenect-chunkview 深度
