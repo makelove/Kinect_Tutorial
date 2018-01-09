@@ -1,4 +1,4 @@
-# Kinect Tutorial 教程2018
+# Kinect Tutorial in Python3  教程2018
 
 
 - 开发环境
@@ -7,10 +7,12 @@
     - libfreenect
         - API:https://openkinect.github.io/libfreenect2/index.html
     - OpenCV 3.3
+    - Kinect v1
 - 参考图书：
     - [Hacking the Xbox Kinect](https://item.jd.com/19393582.html)    
         - 使用libfreenect
     - Raspberry-Kinect-Opencv https://github.com/Snigf12/Python-Raspberry-Kinect-Opencv---Artificial-Vision-System
+    - ROS [Kinect-ASUS-Xtion-Pro-Live-Calibration-Tutorials](https://github.com/taochenshh/Kinect-ASUS-Xtion-Pro-Live-Calibration-Tutorials)
 
 - 校准
     - https://openkinect.org/wiki/Calibration
