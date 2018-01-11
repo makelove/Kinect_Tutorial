@@ -102,4 +102,14 @@ Records the Kinect sensor data to a directory
 Result can be used as input to Fakenect
 Usage:
   record [-h] [-ffmpeg] [-ffmpeg-opts <options>] <target basename>
+
+#会产生2个视频文件
+fakenect-record -ffmpeg test_record
+test_record-depth.avi
+test_record-index.txt
+test_record-rgb.avi
+
+#
+fakenect-record test_record2
+#产生一大堆文件，包括depth的dump文件和RGB的ppm图像文件
 ```
