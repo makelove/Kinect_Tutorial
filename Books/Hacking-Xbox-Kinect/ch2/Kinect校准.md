@@ -1,6 +1,8 @@
 ## Kinect校准
 
 - rgbdemo kinect calibration
+    - 参考
+        - http://nicolas.burrus.name/index.php/Research/KinectCalibration
     - [Projector-Kinect Calibration Tutorial](http://rgbdemo.org/index.php/Documentation/TutorialProjectorKinectCalibration)
     - 源代码 https://github.com/rgbdemo/rgbdemo
         - git clone --recursive git://github.com/rgbdemo/rgbdemo.git

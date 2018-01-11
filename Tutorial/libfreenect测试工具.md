@@ -76,6 +76,21 @@ write_register: 0x0047 <= 0x00
 'e' - auto exposure, 'b' - white balance, 'r' - raw color, 'n' - near mode (K4W only)
 ```
 
+- freenect-wavrecord
+```bash
+Number of devices found: 1
+Found sibling device [single on same bus]
+Uploading firmware to audio device in bootloader state.
+Trying to open ./audios.bin as firmware...
+Trying to open /Users/play/.libfreenect/audios.bin as firmware...
+Trying to open /usr/local/share/libfreenect/audios.bin as firmware...
+Trying to open /usr/share/libfreenect/audios.bin as firmware...
+Trying to open ./../Resources/audios.bin as firmware...
+upload_firmware: failed to find firmware file.
+upload_firmware failed: -2
+Could not open device
+```
+
 - fakenect
 ```bash
 Usage: /usr/local/bin/fakenect <database> <application> <args>

@@ -19,23 +19,28 @@ import numpy as np
 Grabs a depth map from the  sensor and creates an image from it.
 """
 
+kernel = np.ones((5, 5), np.uint8)
 
-def getDepthMap():
+
+def getDepthMap(mindep=2,maxdep=5):
     depth, timestamp = freenect.sync_get_depth()
 
     np.clip(depth, 0, 2 ** 10 - 1, depth)
-    depth >>= 2
+    depth >>= mindep
+    # depth <<= maxdep
     depth = depth.astype(np.uint8)
 
     return depth
 
 
 while True:
-    depth = getDepthMap()
-    print('depth', type(depth))
+    depth4 = getDepthMap(6,10)
+    depth2 = getDepthMap(2,5)
+    # print('depth', type(depth2))
 
-    blur = cv2.GaussianBlur(depth, (5, 5), 0)
+    blur = cv2.GaussianBlur(depth2, (5, 5), 0)
 
+    cv2.imshow('depth4', depth4)
     # cv2.imshow('depth', depth)
-    cv2.imshow('blur', blur)#OK
+    cv2.imshow('blur', blur)  # OK
     cv2.waitKey(10)
