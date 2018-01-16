@@ -44,8 +44,10 @@ if __name__ == "__main__":
             # print('frame', type(frame),frame.shape)#<class 'numpy.ndarray'> (480, 640, 3)
             # get a frame from depth sensor
             depth = get_depth()
-            frame[depth < minThresh] = (255, 255, 255)  # (0, 0, 0)
-            frame[depth > maxThresh] = (0, 0, 0)  # (255, 255, 255)
+            # frame[depth < minThresh] = (255, 255, 255)  # (0, 0, 0)
+            frame[depth < minThresh] = (255, 0, 0)  # (0, 0, 0)
+            # frame[depth > maxThresh] = (0, 0, 0)  # (255, 255, 255)
+            frame[depth > maxThresh] = (0, 0, 255)  # (255, 255, 255)
             # print('depth', type(depth), depth.shape)#<class 'numpy.ndarray'> (480, 640)
             # display RGB image
             cv2.imshow('RGB image', frame)
@@ -57,6 +59,11 @@ if __name__ == "__main__":
             if k == 27:
                 break
             if k == ord('s'):  # 保存图片
-                cv2.imwrite('ClosestThing1.png', frame)
+                cv2.imwrite('ClosestThing1-2.png', frame)
     except Exception as e:
         print(e)
+    finally:
+        # freenect.close_device()
+        # freenect.shutdown()
+        # freenect.stop_depth()
+        freenect.sync_stop()
