@@ -33,11 +33,15 @@ by Jared St. Jean](https://www.safaribooksonline.com/library/view/kinect-hacks/9
         - >OpenNI provides skeleton tracking through the proprietary NiTE.
         - >The Microsoft SDK provides skeleton tracking as well, it basically the same as the skeleton tracking through NiTE.
     - 第2个开源方案：https://github.com/joaquimrocha/Skeltrack
-    - Be sure to install GFreenect before Skeltrack https://github.com/elima/GFreenect
-    - Once Skeltrack is compiled run the kinect binary in the examples folder
-        - 安装步骤https://tayyabnaseer.blogspot.jp/2012/05/installing-skeltrack-on-ubuntu.html
+        - https://github.com/elima/GFreenect
+    - >Be sure to install GFreenect before Skeltrack https://github.com/elima/GFreenect
+    - >Once Skeltrack is compiled run the kinect binary in the examples folder
+        - 安装步骤
+            - https://tayyabnaseer.blogspot.jp/2012/05/installing-skeltrack-on-ubuntu.html
+            - http://www.instructables.com/id/Kinect-Desktop-Control-for-Linux/
             - 演示视频 [Skeleton Tracking with Kinect & Processing
 ](https://vimeo.com/36267446)
+                - [Kinect体感操控](https://www.bilibili.com/video/av18376207/)
         
     
 - libfreenect multiple kinects同时连接多个Kinect
