@@ -25,7 +25,7 @@ kernel = np.ones((5, 5), np.uint8)
 def getDepthMap(mindep=2,maxdep=5):
     depth, timestamp = freenect.sync_get_depth()
 
-    np.clip(depth, 0, 2 ** 10 - 1, depth)
+    np.clip(depth, 0, 2 ** 10 - 1, depth)#修剪？
     depth >>= mindep
     # depth <<= maxdep
     depth = depth.astype(np.uint8)
@@ -33,14 +33,18 @@ def getDepthMap(mindep=2,maxdep=5):
     return depth
 
 
-while True:
-    depth4 = getDepthMap(6,10)
-    depth2 = getDepthMap(2,5)
-    # print('depth', type(depth2))
+try:
+    while True:
+        depth4 = getDepthMap(6,10)
+        depth2 = getDepthMap(2,5)
+        # print('depth', type(depth2))
 
-    blur = cv2.GaussianBlur(depth2, (5, 5), 0)
+        blur = cv2.GaussianBlur(depth2, (5, 5), 0)
 
-    cv2.imshow('depth4', depth4)
-    # cv2.imshow('depth', depth)
-    cv2.imshow('blur', blur)  # OK
-    cv2.waitKey(10)
+        cv2.imshow('depth4', depth4)
+        # cv2.imshow('depth', depth)
+        cv2.imshow('blur', blur)  # OK
+        cv2.waitKey(10)
+except KeyboardInterrupt:
+    freenect.sync_stop()
+    # freenect.close_device()
