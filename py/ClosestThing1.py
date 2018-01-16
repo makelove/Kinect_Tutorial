@@ -1,23 +1,21 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2017/12/8 19:34
+# @Time    : 2018/1/16 23:02
 # @Author  : play4fun
-# @File    : kinect_test.py
+# @File    : ClosestThing1.py
 # @Software: PyCharm
 
 """
-kinect_test.py:
-https://naman5.wordpress.com/2014/06/24/experimenting-with-kinect-using-opencv-python-and-open-kinect-libfreenect/
-
-安装驱动
-sudo apt install python-freenect
-python2.7  kinect_test.py
-第二次启动，成功！
+ClosestThing1.py:
 """
 
 # import the necessary modules
 import freenect
 import cv2
 import numpy as np
+
+minThresh = 500
+# maxThresh = 830
+maxThresh = 700
 
 
 # function to get RGB image from kinect
@@ -30,8 +28,11 @@ def get_video() -> np.ndarray:
 # function to get depth image from kinect
 def get_depth() -> np.ndarray:
     array, _ = freenect.sync_get_depth()
-    array = array.astype(np.uint8)
+    # array=np.clip(array,minThresh,maxThresh)
+
+    # array = array.astype(np.uint8)
     return array
+    # return a2
 
 
 if __name__ == "__main__":
@@ -40,18 +41,22 @@ if __name__ == "__main__":
         while True:
             # get a frame from RGB camera
             frame = get_video()
-            print('frame', type(frame), frame.shape)  # <class 'numpy.ndarray'> (480, 640, 3)
+            # print('frame', type(frame),frame.shape)#<class 'numpy.ndarray'> (480, 640, 3)
             # get a frame from depth sensor
             depth = get_depth()
-            print('depth', type(depth), depth.shape)  # <class 'numpy.ndarray'> (480, 640)
+            frame[depth < minThresh] = (255, 255, 255)  # (0, 0, 0)
+            frame[depth > maxThresh] = (0, 0, 0)  # (255, 255, 255)
+            # print('depth', type(depth), depth.shape)#<class 'numpy.ndarray'> (480, 640)
             # display RGB image
             cv2.imshow('RGB image', frame)
             # display depth image
-            cv2.imshow('Depth image', depth)
+            cv2.imshow('Depth image', depth.astype(np.uint8))
 
             # quit program when 'esc' key is pressed
             k = cv2.waitKey(5)  # & 0xFF
             if k == 27:
                 break
-    except KeyboardInterrupt as e:
+            if k == ord('s'):  # 保存图片
+                cv2.imwrite('ClosestThing1.png', frame)
+    except Exception as e:
         print(e)

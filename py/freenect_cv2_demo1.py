@@ -25,7 +25,7 @@ kernel = np.ones((5, 5), np.uint8)
 def getDepthMap(mindep=2,maxdep=5):
     depth, timestamp = freenect.sync_get_depth()
 
-    np.clip(depth, 0, 2 ** 10 - 1, depth)#修剪？
+    np.clip(depth, a_min=0, a_max=2 ** 10 - 1, out=depth)#修剪？
     depth >>= mindep
     # depth <<= maxdep
     depth = depth.astype(np.uint8)
