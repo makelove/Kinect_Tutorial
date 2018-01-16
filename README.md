@@ -8,7 +8,11 @@
         - API:https://openkinect.github.io/libfreenect2/index.html
     - OpenCV 3.3
     - Kinect v1
+    - 安装
+        - Tutorial/在virtualenv安装freenect库-python3.md
 - 参考图书：
+    - [Kinect Hacks
+by Jared St. Jean](https://www.safaribooksonline.com/library/view/kinect-hacks/9781449332181/)
     - [Hacking the Xbox Kinect](https://item.jd.com/19393582.html)    
         - 使用libfreenect
     - Raspberry-Kinect-Opencv https://github.com/Snigf12/Python-Raspberry-Kinect-Opencv---Artificial-Vision-System
