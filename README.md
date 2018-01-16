@@ -26,6 +26,8 @@ by Jared St. Jean](https://www.safaribooksonline.com/library/view/kinect-hacks/9
 - fakenect hands freenect-cppview    
 
 - Skeleton Tracking骨骼追踪
+    - 需要使用OpenNi和NiTE
+        - NiViewer2
     - https://github.com/joaquimrocha/Skeltrack
     - Be sure to install GFreenect before Skeltrack https://github.com/elima/GFreenect
     - Once Skeltrack is compiled run the kinect binary in the examples folder
