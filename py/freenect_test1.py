@@ -68,7 +68,7 @@ if __name__ == "__main__":
     screen = pygame.display.set_mode(disp_size)
     # font = pygame.font.Font('slkscr.ttf', 32)
     # font = pygame.font.Font(None, 32) #不能没有字体
-    font = pygame.font.Font('/Users/play/Downloads/wqy-microhei/wqy-microhei.ttc', 32)
+    font = pygame.font.Font('/Users/play/Downloads/wqy-microhei/wqy-microhei.ttc', 32)#搞定
     while True:
         events = pygame.event.get()
         for e in events:
