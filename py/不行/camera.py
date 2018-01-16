@@ -6,6 +6,7 @@
 
 """
 camera.py:
+不支持
 """
 
 import cv2
@@ -14,7 +15,7 @@ import sys
 
 class Camera(object):
 
-    def __init__(self, index=0):
+    def __init__(self, index=1):#Kinect
         self.cap = cv2.VideoCapture(index)
         self.openni = index in (cv2.CAP_OPENNI, cv2.CAP_OPENNI2)
         self.fps = 0

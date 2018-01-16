@@ -37,7 +37,7 @@ def get_depth():
 if __name__ == "__main__":
     print('start')
     try:
-        while 1:
+        while True:
             # get a frame from RGB camera
             frame = get_video()
             print('frame', type(frame))
@@ -50,8 +50,8 @@ if __name__ == "__main__":
             cv2.imshow('Depth image', depth)
 
             # quit program when 'esc' key is pressed
-            k = cv2.waitKey(5) & 0xFF
+            k = cv2.waitKey(5)  # & 0xFF
             if k == 27:
                 break
-    except Exception as e:
+    except KeyboardInterrupt as e:
         print(e)
