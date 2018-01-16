@@ -15,7 +15,8 @@ sudo apt-get build-dep python-pygame
 pip install pygame
 
 
-不成功，没显示？
+需要添加自己的字体
+下载文泉驿字体：http://wenq.org/wqy2/index.cgi
 """
 
 import pygame
@@ -65,8 +66,9 @@ if __name__ == "__main__":
     disp_size = (640, 480)
     pygame.init()
     screen = pygame.display.set_mode(disp_size)
-    # font = pygame.font.Font('slkscr.ttf', 32) #TODO provide your own font
-    font = pygame.font.Font(None, 32) #TODO provide your own font
+    # font = pygame.font.Font('slkscr.ttf', 32)
+    # font = pygame.font.Font(None, 32) #不能没有字体
+    font = pygame.font.Font('/Users/play/Downloads/wqy-microhei/wqy-microhei.ttc', 32)
     while True:
         events = pygame.event.get()
         for e in events:
