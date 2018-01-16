@@ -28,9 +28,17 @@ by Jared St. Jean](https://www.safaribooksonline.com/library/view/kinect-hacks/9
 - Skeleton Tracking骨骼追踪
     - 需要使用OpenNi和NiTE
         - NiViewer2
-    - https://github.com/joaquimrocha/Skeltrack
+        - 只支持Kinect V2 ？？
+        - >OpenKinect/libfreenect does not provide skeleton tracking.
+        - >OpenNI provides skeleton tracking through the proprietary NiTE.
+        - >The Microsoft SDK provides skeleton tracking as well, it basically the same as the skeleton tracking through NiTE.
+    - 第2个开源方案：https://github.com/joaquimrocha/Skeltrack
     - Be sure to install GFreenect before Skeltrack https://github.com/elima/GFreenect
     - Once Skeltrack is compiled run the kinect binary in the examples folder
+        - 安装步骤https://tayyabnaseer.blogspot.jp/2012/05/installing-skeltrack-on-ubuntu.html
+            - 演示视频 [Skeleton Tracking with Kinect & Processing
+](https://vimeo.com/36267446)
+        
     
 - libfreenect multiple kinects同时连接多个Kinect
     - 代码参考 
