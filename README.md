@@ -46,7 +46,7 @@ by Jared St. Jean](https://www.safaribooksonline.com/library/view/kinect-hacks/9
     
 - libfreenect multiple kinects同时连接多个Kinect
     - 代码参考 
-        - https://github.com/shiffman/OpenKinect-for-Processing/blob/8820b4e18d43d806df2409216d6505c0fe6da90f/OpenKinect-Processing/examples/Kinect_v1/MultiKinect/MultiKinect.pde
+        - 测试过。https://github.com/shiffman/OpenKinect-for-Processing/blob/8820b4e18d43d806df2409216d6505c0fe6da90f/OpenKinect-Processing/examples/Kinect_v1/MultiKinect/MultiKinect.pde
     - https://github.com/OpenKinect/libfreenect/issues/522
     - >It is somewhat hard to tell about your PCIe bandwidth带宽不够. It is part of the motherboard configuration and it depends on the USB controller link too. You can try out different machines though, or you can use multiple machines and connect them through ROS.
     - 需要一台配备强大GPU的高端个人电脑，每个Kinect需要一个USB3控制器，每个控制器都有自己的PCI-Express x8或x16连接。

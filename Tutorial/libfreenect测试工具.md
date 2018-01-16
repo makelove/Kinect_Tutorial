@@ -103,8 +103,13 @@ Result can be used as input to Fakenect
 Usage:
   record [-h] [-ffmpeg] [-ffmpeg-opts <options>] <target basename>
 
-#会产生2个视频文件
+#会产生2个视频文件,没有音频
 fakenect-record -ffmpeg test_record
+#
+ffmpeg -pix_fmt rgb24 -s 640x480 -f rawvideo -i /dev/stdin -aspect 4:3 -r 20 -vcodec msmpeg4 -b 30000k test_record-depth.avi
+ffmpeg -pix_fmt rgb24 -s 640x480 -f rawvideo -i /dev/stdin -aspect 4:3 -r 20 -vcodec msmpeg4 -b 30000k test_record-rgb.avi
+
+#
 test_record-depth.avi
 test_record-index.txt
 test_record-rgb.avi
