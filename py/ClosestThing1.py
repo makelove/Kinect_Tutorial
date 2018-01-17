@@ -6,16 +6,21 @@
 
 """
 ClosestThing1.py:
+跳绳
 """
 
 # import the necessary modules
 import freenect
 import cv2
 import numpy as np
+import pickle
 
-minThresh = 500
-# maxThresh = 830
-maxThresh = 700
+# minThresh = 500
+# minThresh = 600
+minThresh = 600
+# maxThresh = 700
+# maxThresh = 800
+maxThresh = 850
 
 
 # function to get RGB image from kinect
@@ -37,6 +42,7 @@ def get_depth() -> np.ndarray:
 
 if __name__ == "__main__":
     print('start')
+    pos_li=[]#保存坐标
     try:
         while True:
             # get a frame from RGB camera
@@ -63,7 +69,9 @@ if __name__ == "__main__":
                 # cv2.circle(frame, center=(point[1],point[0]), radius=10, color=(0, 255, 0), thickness=-1)#绿色
 
                 p2 = (l3[0][1], l3[0][0])
-                print('point:', p2)
+                # print('point:', p2)
+                print(p2)
+                pos_li.append(p2)
                 cv2.circle(frame, center=p2, radius=10, color=(255, 0, 0), thickness=-1)  # 蓝色
             except Exception as e:
                 print(e)
@@ -87,3 +95,5 @@ if __name__ == "__main__":
         # freenect.shutdown()
         # freenect.stop_depth()
         freenect.sync_stop()
+        with open('top_pos_list-3','wb') as f:
+            pickle.dump(pos_li,f)
