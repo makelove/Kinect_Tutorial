@@ -18,6 +18,7 @@ if __name__ == "__main__":
     print('start')
     while True:
         array, timestamp = freenect.sync_get_depth()
+        cv2.imshow('array', array)
         depth = array.astype(np.uint8)
         cv2.imshow('Depth image', depth)
 
@@ -29,3 +30,4 @@ if __name__ == "__main__":
             # with open('depth_ndarray-1', 'wb') as f:#保存下来，为了以后在ipython内调试
             #     pickle.dump(array, f)
             break
+    freenect.sync_stop()
