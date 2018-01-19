@@ -2,7 +2,7 @@
 
 - https://github.com/shiffman/OpenKinect-for-Processing
     - 代码example：https://github.com/shiffman/OpenKinect-for-Processing/tree/master/OpenKinect-Processing/examples
-- [Getting Started with Kinect and Processing](http://shiffman.net/p5/kinect/)
+- 很好的介绍[Getting Started with Kinect and Processing](http://shiffman.net/p5/kinect/)
 - 视频教程
     - Youtube [12: Kinect and Processing Tutorial](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZMlWHdcy8hAGDy6IaoxUKf)
     - 讲得很棒。开发语言是Processing

@@ -22,6 +22,9 @@ by Jared St. Jean](https://www.safaribooksonline.com/library/view/kinect-hacks/9
     - https://openkinect.org/wiki/Calibration
     - 好 [Kinect校准教程](http://rgbdemo.org/index.php/Documentation/TutorialProjectorKinectCalibration)
     
+- 常问问题
+    - 深度图像（v1）中有什么阴影？[Kinect阴影图](http://media.zero997.com/kinect_shadow.pdf)
+    - kinect可以看到的深度范围是多少？（v1）〜0.7-6米或2.3-20英尺。请注意，在距离太远和太近的两个元素上都会得到黑色像素（或2048的原始深度值）。    
     
 - fakenect hands freenect-cppview    
 
