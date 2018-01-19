@@ -1,3 +1,5 @@
+//不生效？
+
 import org.openkinect.processing.*; //<>//
 
 // Kinect Library object
