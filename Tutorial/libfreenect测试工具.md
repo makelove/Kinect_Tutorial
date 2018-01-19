@@ -21,20 +21,7 @@ led[3] tilt[5] accel[0.263426,10.393373,1.987673]
 led[2] tilt[-6] accel[0.263426,10.584956,1.125550]
 led[5] tilt[0] accel[0.359218,10.584956,-0.981862]
 ```
-- freenect-wavrecord
-```bash
-Number of devices found: 1
-Found sibling device [single on same bus]
-Uploading firmware to audio device in bootloader state.
-Trying to open ./audios.bin as firmware...
-Trying to open /Users/play/.libfreenect/audios.bin as firmware...
-Trying to open /usr/local/share/libfreenect/audios.bin as firmware...
-Trying to open /usr/share/libfreenect/audios.bin as firmware...
-Trying to open ./../Resources/audios.bin as firmware...
-upload_firmware: failed to find firmware file.
-upload_firmware failed: -2
-Could not open device
-```
+
 
 - freenect-glview
     - 'w' - tilt up, 's' - level, 'x' - tilt down
