@@ -26,6 +26,8 @@ def handler(signum, frame):
     """Sets up the kill handler, catches SIGINT"""
     global keep_running
     keep_running = False
+
+
 print('Press Ctrl-C in terminal to stop')
 signal.signal(signal.SIGINT, handler)
 freenect.runloop(body=body)
