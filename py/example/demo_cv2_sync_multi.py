@@ -36,4 +36,4 @@ while 1:
     cv2.imshow('Video', video)
     if cv2.waitKey(10) == 27:
         break
-    #freenect.sync_stop()  # NOTE: Uncomment if your machine can't handle it
+freenect.sync_stop()  # NOTE: Uncomment if your machine can't handle it

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-"""Sweeps throught the depth image showing 100 range at a time"""
+"""
+Sweeps throught the depth image showing 100 range at a time
+扫描
+"""
 import freenect
 import cv2
 import numpy as np
