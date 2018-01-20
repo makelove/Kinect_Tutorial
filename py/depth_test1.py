@@ -7,6 +7,9 @@
 """
 depth_test1.py:
 给depth添加颜色
+
+深色，黑色，数值小0越近，
+浅色，白色，数值大255越远
 """
 
 import freenect
@@ -18,7 +21,7 @@ if __name__ == "__main__":
     print('start')
     while True:
         array, timestamp = freenect.sync_get_depth()
-        cv2.imshow('array', array)
+        # cv2.imshow('array', array)
         depth = array.astype(np.uint8)
         cv2.imshow('Depth image', depth)
 
