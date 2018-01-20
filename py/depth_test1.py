@@ -25,7 +25,7 @@ if __name__ == "__main__":
         # color_img = cv2.cvtColor(depth,cv2.COLOR_GRAY2RGB)#没用
         # cv2.imshow('color_img', color_img)
 
-        k = cv2.waitKey(5)  # & 0xFF
+        k = cv2.waitKey(50)  # & 0xFF
         if k == 27:
             # with open('depth_ndarray-1', 'wb') as f:#保存下来，为了以后在ipython内调试
             #     pickle.dump(array, f)
