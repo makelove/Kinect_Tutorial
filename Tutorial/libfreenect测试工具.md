@@ -2,10 +2,19 @@
 - 按ESC退出
 
 - freenect-camtest
+```bash
+Received depth frame at 714807479
+Received depth frame at 716809634
+Received depth frame at 718811789
+^CShutting down
+write_register: 0x0006 <= 0x00
+write_register: 0x0005 <= 0x00
+```
+
 - freenect-chunkview 深度
 - freenect-cpp_pcview
-    - 好，有用。带坐标系
-    - 放大
+    - 最好，有用。带坐标系
+    - 不能放大？
 - freenect-cppview  同时在2个窗口显示 RGB和depth图像   
 - freenect-hiview 高清？
 - freenect-micview 多个相机？
@@ -24,12 +33,13 @@ led[5] tilt[0] accel[0.359218,10.584956,-0.981862]
 
 
 - freenect-glview
+    - 常用
     - 'w' - tilt up, 's' - level, 'x' - tilt down
     - '0'-'6' - select LED mode, 
     - '+' & '-' - change IR intensity强度
     - 'f' - change video format, 'm' - mirror video, 'o' - rotate video with accelerometer
     - 'e' - auto exposure, 'b' - white balance, 'r' - raw color, 
-    - 'n' - near mode (K4W only)
+    - 'n' - near mode (K4W only), K4W:Kinect for Windows
 
 - freenect-glpclview
     - 3D

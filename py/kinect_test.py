@@ -40,10 +40,10 @@ if __name__ == "__main__":
         while True:
             # get a frame from RGB camera
             frame = get_video()
-            print('frame', type(frame), frame.shape)  # <class 'numpy.ndarray'> (480, 640, 3)
+            # print('frame', type(frame), frame.shape)  # <class 'numpy.ndarray'> (480, 640, 3)
             # get a frame from depth sensor
             depth = get_depth()
-            print('depth', type(depth), depth.shape)  # <class 'numpy.ndarray'> (480, 640)
+            # print('depth', type(depth), depth.shape)  # <class 'numpy.ndarray'> (480, 640)
             # display RGB image
             cv2.imshow('RGB image', frame)
             # display depth image
