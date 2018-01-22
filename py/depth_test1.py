@@ -22,7 +22,7 @@ if __name__ == "__main__":
     while True:
         array, timestamp = freenect.sync_get_depth()
         # cv2.imshow('array', array)
-        # np.clip(array, a_min=0, a_max=2 ** 10 - 1, out=array)  # 修剪？
+        # np.clip(array, a_min=0, a_max=2 ** 10 - 1, out=array)  # 修剪,限制大小范围
         array >>= 2#只需要这个
         depth = array.astype(np.uint8)
         cv2.imshow('Depth image', depth)
