@@ -13,6 +13,8 @@ write_register: 0x0005 <= 0x00
 
 - freenect-chunkview 深度
 - freenect-cpp_pcview
+    - 源代码：https://github.com/OpenKinect/libfreenect/blob/master/wrappers/cpp/cpp_pc_view.cpp
+        - OpenGL？
     - 最好，有用。带坐标系
     - 不能放大？
 - freenect-cppview  同时在2个窗口显示 RGB和depth图像   

@@ -32,7 +32,7 @@ if __name__ == "__main__":
         depth = array.astype(np.uint8)
         depth = scan_out(depth)
 
-        if rgb != 'd':
+        if rgb != 'd':#降低了速度？
             tmp = depth.copy()
             depth = np.empty([depth.shape[0], depth.shape[1], 3], dtype=np.uint8)
             for i in range(depth.shape[0]):
