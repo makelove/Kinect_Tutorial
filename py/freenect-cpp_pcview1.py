@@ -32,7 +32,7 @@ color = True  # Flag to indicate to use of color in the cloud
 
 
 def printInfo():
-    txt = "\nAvailable Controls:" + "===================" + "Rotate       :   Mouse Left Button" + "Zoom         :   Mouse Wheel" + "Toggle Color :   C" + "Quit         :   Q or Esc\n"
+    txt = "\nAvailable Controls:\n" + "===================\n" + "Rotate       :   Mouse Left Button\n" + "Zoom         :   Mouse Wheel\n" + "Toggle Color :   C\n" + "Quit         :   Q or Esc\n"
 
     print(txt)
 
@@ -59,7 +59,7 @@ def DrawGLScene():  # 主要功能
         # for (int i = 0; i < 480 * 640; ++i):
         for i in range(480 * 640):
 
-            if color:
+            if color:#TODO Numpy
                 glColor3ub(rgb[3 * i + 0],  # R
                            rgb[3 * i + 1],  # G
                            rgb[3 * i + 2])  # B
