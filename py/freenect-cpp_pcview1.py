@@ -10,11 +10,17 @@ freenect-cpp_pcview 用python实现
 参考源代码：https://github.com/OpenKinect/libfreenect/blob/master/wrappers/cpp/cpp_pc_view.cpp
 """
 import freenect
-import cv2
+import cv2, sys
 import numpy as np
 import pickle
-from OpenGL.GL import *
-from OpenGL.GLU import *
+
+try:
+    from OpenGL.GLUT import *
+    from OpenGL.GL import *
+    from OpenGL.GLU import *
+except:
+    print(''' Error: PyOpenGL not installed properly ''')
+    sys.exit()
 
 
 def printInfo():
@@ -23,12 +29,16 @@ def printInfo():
     print(txt)
 
 
-def DrawGLScene():#主要功能
+def DrawGLScene():  # 主要功能
     array, timestamp = freenect.sync_get_depth()
     array >>= 2  # 只需要这个
 
     rgbarray, timestamp2 = freenect.sync_get_video()
     rgb = cv2.cvtColor(rgbarray, cv2.COLOR_RGB2BGR)
+
+    pass
+
+def idleGLScene():
 
     pass
 
@@ -38,37 +48,34 @@ def main():
     # device->startVideo();
     # device->startDepth();
 
-    glutInit( & argc, argv);
+    # glutInit( & argc, argv);
+    glutInit(sys.argv)
 
-    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-    glutInitWindowSize(640, 480);
-    glutInitWindowPosition(0, 0);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH)
+    glutInitWindowSize(640, 480)
+    glutInitWindowPosition(0, 0)
 
-    window = glutCreateWindow("LibFreenect");
-    glClearColor(0.45
-    f, 0.45
-    f, 0.45
-    f, 0.0
-    f);
+    glutCreateWindow("LibFreenect")
+    glClearColor(0.45, 0.45, 0.45, 0.0)
 
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_ALPHA_TEST);
-    glAlphaFunc(GL_GREATER, 0.0
-    f);
+    glEnable(GL_DEPTH_TEST)
+    glEnable(GL_ALPHA_TEST)
+    glAlphaFunc(GL_GREATER, 0.0)
 
     glMatrixMode(GL_PROJECTION);
-    gluPerspective(50.0, 1.0, 900.0, 11000.0);
+    gluPerspective(50.0, 1.0, 900.0, 11000.0)
 
     glutDisplayFunc(DrawGLScene)  # 最重要是这个函数
-    glutIdleFunc( & idleGLScene);
-    glutReshapeFunc( & resizeGLScene);
-    glutKeyboardFunc( & keyPressed);
-    glutMotionFunc( & mouseMoved);
-    glutMouseFunc( & mouseButtonPressed);
+    glutIdleFunc(idleGLScene)
+    # TODO
+    # glutReshapeFunc(resizeGLScene)
+    # glutKeyboardFunc(keyPressed)
+    # glutMotionFunc(mouseMoved)
+    # glutMouseFunc(mouseButtonPressed)
 
     printInfo()
 
-    glutMainLoop();
+    glutMainLoop()
 
 
 if __name__ == '__main__':
