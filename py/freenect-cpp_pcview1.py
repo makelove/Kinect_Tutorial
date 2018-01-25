@@ -13,6 +13,8 @@ import freenect
 import cv2
 import numpy as np
 import pickle
+from OpenGL.GL import *
+from OpenGL.GLU import *
 
 
 def printInfo():
@@ -20,9 +22,16 @@ def printInfo():
 
     print(txt)
 
-def DrawGLScene():
+
+def DrawGLScene():#主要功能
+    array, timestamp = freenect.sync_get_depth()
+    array >>= 2  # 只需要这个
+
+    rgbarray, timestamp2 = freenect.sync_get_video()
+    rgb = cv2.cvtColor(rgbarray, cv2.COLOR_RGB2BGR)
 
     pass
+
 
 def main():
     # device = & freenect.createDevice < MyFreenectDevice > (0);
@@ -50,7 +59,7 @@ def main():
     glMatrixMode(GL_PROJECTION);
     gluPerspective(50.0, 1.0, 900.0, 11000.0);
 
-    glutDisplayFunc(  DrawGLScene)#最重要是这个函数
+    glutDisplayFunc(DrawGLScene)  # 最重要是这个函数
     glutIdleFunc( & idleGLScene);
     glutReshapeFunc( & resizeGLScene);
     glutKeyboardFunc( & keyPressed);
