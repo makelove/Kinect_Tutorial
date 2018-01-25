@@ -9,14 +9,25 @@ freenect-cpp_pcview1.py:
 freenect-cpp_pcview 用python实现
 参考源代码：https://github.com/OpenKinect/libfreenect/blob/master/wrappers/cpp/cpp_pc_view.cpp
 """
+import freenect
+import cv2
+import numpy as np
+import pickle
 
 
+def printInfo():
+    txt = "\nAvailable Controls:" + "===================" + "Rotate       :   Mouse Left Button" + "Zoom         :   Mouse Wheel" + "Toggle Color :   C" + "Quit         :   Q or Esc\n"
 
+    print(txt)
+
+def DrawGLScene():
+
+    pass
 
 def main():
-    device = & freenect.createDevice < MyFreenectDevice > (0);
-    device->startVideo();
-    device->startDepth();
+    # device = & freenect.createDevice < MyFreenectDevice > (0);
+    # device->startVideo();
+    # device->startDepth();
 
     glutInit( & argc, argv);
 
@@ -39,16 +50,17 @@ def main():
     glMatrixMode(GL_PROJECTION);
     gluPerspective(50.0, 1.0, 900.0, 11000.0);
 
-    glutDisplayFunc( & DrawGLScene);
+    glutDisplayFunc(  DrawGLScene)#最重要是这个函数
     glutIdleFunc( & idleGLScene);
     glutReshapeFunc( & resizeGLScene);
     glutKeyboardFunc( & keyPressed);
     glutMotionFunc( & mouseMoved);
     glutMouseFunc( & mouseButtonPressed);
 
-    printInfo();
+    printInfo()
 
     glutMainLoop();
+
 
 if __name__ == '__main__':
     main()
