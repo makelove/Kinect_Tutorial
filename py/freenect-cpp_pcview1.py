@@ -22,6 +22,7 @@ except:
     print(''' Error: PyOpenGL not installed properly ''')
     sys.exit()
 
+window = 0  # Number of the glut window.
 mx = -1
 my = -1  # Prevous mouse coordinates
 anglex = 0
@@ -120,6 +121,20 @@ def mouseMoved(x: int, y: int):
     my = y
 
 
+def keyPressed(key, x: int, y: int):
+    global color
+    if key == b'C' or key == b'c':
+        color = not color
+        # break;
+
+    if key == b'Q' or key == b'q' or key == b'\x1b':  # ESC
+        glutDestroyWindow(window)
+        # device->stopDepth();
+        # device->stopVideo();
+        freenect.sync_stop()
+        exit(0)
+
+
 def main():
     # device = & freenect.createDevice < MyFreenectDevice > (0);
     # device->startVideo();
@@ -132,7 +147,8 @@ def main():
     glutInitWindowSize(640, 480)
     glutInitWindowPosition(0, 0)
 
-    glutCreateWindow("freenect-cpp_pcview")
+    global window
+    window = glutCreateWindow("freenect-cpp_pcview")
     glClearColor(0.45, 0.45, 0.45, 0.0)
 
     glEnable(GL_DEPTH_TEST)
@@ -147,7 +163,7 @@ def main():
 
     # TODO
     glutReshapeFunc(resizeGLScene)
-    # glutKeyboardFunc(keyPressed)
+    glutKeyboardFunc(keyPressed)
     glutMotionFunc(mouseMoved)
     # glutMouseFunc(mouseButtonPressed)
 
@@ -157,4 +173,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(e)
