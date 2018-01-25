@@ -52,6 +52,7 @@ def DrawGLScene():  # 主要功能
 
     glBegin(GL_POINTS)
 
+    #TODO 有错误，不能正常显示 ！！
     col3 = glColor3ub(255, 255, 255)
     # if (!color) glColor3ub(255, 255, 255):
     if not color and col3:
