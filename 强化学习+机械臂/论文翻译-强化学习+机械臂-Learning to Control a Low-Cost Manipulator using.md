@@ -56,3 +56,10 @@
 - In a classical RL setup, it is assumed that the learner is not aware of any constraints in the state space, but has to discover walls etc. by running into them and gaining a high penalty.
      - >在经典的RL配置,它假设学习者在状态空间内不能感知任何约束,但不得不去发现墙壁,通过如果撞到墙会受到高的惩罚
      
+- VII. CONCLUSION 总结
+     - We presented a data-efficient and fully autonomous ap- proach for learning robot control even when the robotic system is very imprecise. Our model-based policy search method profits from closed-form approximate inference for policy evaluation and analytic gradients for policy learning. To avoid collisions, we presented a way of taking knowledge about obstacles in the environment into account during planning and controlling under uncertainty.
+        - >即使机器人系统非常不精确，我们也提出了一个用于学习机器人控制的数据高效和完全自主的方法。 我们的基于模型的策略搜索方法从政策评估的封闭式近似推断和政策学习的分析梯度中获益。 为了避免碰撞，我们提出了一种在不确定情况下的计划和控制过程中考虑环境障碍知识的方法。
+     - Furthermore, we evaluated the gains of reusing dynamics models in a sequential task. With only very general prior knowledge about the robot and the task to be learned, we demonstrated that good controllers for a low-cost robotic system consisting of a cheap manipulator and depth camera could be learned in only a few trials.
+        - >此外，我们评估了在连续任务中重复使用动力学模型的收益。 只有非常一般的关于机器人的知识和要学习的任务，我们证明了在廉价的机械手和深度相机组成的低成本机器人系统中的好控制器只能在少数几个试验中学到。
+     - Despite the limitations of our current system, we believe that the overall framework can be readily adapted to handle more complex tasks. In future work, we aim to learn more general controllers that can deal with arbitrary start locations of the gripper and the target stack. Grasping objects with such a cheap manipulator is also a promising research direction.
+        - >尽管我们目前的系统有局限性，但我们相信总体框架可以很容易地适应处理更复杂的任务。 在今后的工作中，我们的目标是学习更多可以处理抓手和目标栈任意起始位置的通用控制器。 用这么便宜的操纵器来抓物件也是一个很有前途的研究方向。
