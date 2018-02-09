@@ -1,4 +1,4 @@
-##
+## 学习如何控制一个低成本的机器人
 
 - 摘要
     - The long-term goal of our work is to get away from precise, but very expensive robotic systems and to develop affordable, potentially imprecise
