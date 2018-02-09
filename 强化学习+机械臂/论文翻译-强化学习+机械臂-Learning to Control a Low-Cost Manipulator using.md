@@ -36,6 +36,19 @@
         
 - III. PRELIMINARIES 初步工作   
      - 4个假设
-     - 机械臂Lynxmotion
+     - 机械臂Lynxmotion http://www.lynxmotion.com/c-27-robotic-arms.aspx
         - 6自由度 
             - 1 base rotate, 234 three joints,5 wrist rotate, and a gripper (open/close)6.
+     - Instead of equipping the robot with further sensors and/or markers, we demonstrate that good controllers can be learned without additional information.
+        - > 我们演示,好的控制器可以在没有额外信息的情况下去学习怎样运动,而不是用很多传感器和标记去装备它    
+     - PrimeSense depth camera深度相机
+        - 640 × 480 color RGB, 30Hz.
+        - 深度 距离0.5 m–5 m
+            - 分辨率 在距离2米时是1 cm
+     - ROS handles the communication with the hardware.
+            - ROS机器人操作系统 负责与硬件通信
+     - B. Block Tracking
+        - Assuming that the object has a uniform color, we use color-based region growing starting at the clicked pixel to estimate the extent and 3D center of the object,
+            - >假设 物体有相同的颜色,我们使用居于颜色区域 周围在点击的像素去建立 物体的周长和3D中心
+- IV. POLICY LEARNING WITH STATE-SPACE CONSTRAINTS
+     - 
