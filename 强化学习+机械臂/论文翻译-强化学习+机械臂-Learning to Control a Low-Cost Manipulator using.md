@@ -34,4 +34,8 @@
     - Reducing model bias requires accounting for model uncertainty during planning
         - > 减少模型误差,需要 在规划过程中 模型不确定性 的统计工作
         
-- III. PRELIMINARIES 初步工作        
+- III. PRELIMINARIES 初步工作   
+     - 4个假设
+     - 机械臂Lynxmotion
+        - 6自由度 
+            - 1 base rotate, 234 three joints,5 wrist rotate, and a gripper (open/close)6.
