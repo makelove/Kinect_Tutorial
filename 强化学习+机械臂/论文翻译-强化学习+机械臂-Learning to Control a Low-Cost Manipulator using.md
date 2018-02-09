@@ -52,3 +52,7 @@
             - >假设 物体有相同的颜色,我们使用居于颜色区域 周围在点击的像素去建立 物体的周长和3D中心
 - IV. POLICY LEARNING WITH STATE-SPACE CONSTRAINTS
      - 
+     
+- In a classical RL setup, it is assumed that the learner is not aware of any constraints in the state space, but has to discover walls etc. by running into them and gaining a high penalty.
+     - >在经典的RL配置,它假设学习者在状态空间内不能感知任何约束,但不得不去发现墙壁,通过如果撞到墙会受到高的惩罚
+     
